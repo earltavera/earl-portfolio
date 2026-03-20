@@ -4,7 +4,7 @@
 I bridge the gap between robust software testing and high-quality development. Currently focusing on Software Engineering at Yoobee College while leveraging a background in Data Analytics.
 
 - 🎓 **Currently:** Pursuing MSE (Focusing on C++, Java, and Quantum Computing)
-- 📊 **Background:** Grad Dip in Data Analytics & 6 years in Software QA.
+- 📊 **Background:** Graduate Diploma in Data Analytics & 6 years in Software QA.
 - 🛠️ **Tech Stack:** Python (Pandas, Streamlit), SQL, C++, Java, Qiskit.
 - 📍 **Location:** Auckland, NZ
 
