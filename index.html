@@ -13,6 +13,8 @@
         h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 15px; }
         .project-card { background: #fbfbfb; border: 1px solid #eee; padding: 20px; border-radius: 6px; }
         .project-title { font-weight: bold; font-size: 1.1rem; display: block; margin-bottom: 5px; }
+        .project-link { display: inline-block; margin-top: 10px; font-weight: 600; color: #007aff; text-decoration: none; border: 1px solid #007aff; padding: 5px 12px; border-radius: 4px; transition: 0.2s; }
+        .project-link:hover { background: #007aff; color: #fff; }
         .tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin-top: 15px; }
         .tags li { background: #fff; border: 1px solid #ddd; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; color: #555; }
         footer { text-align: center; margin-top: 60px; font-size: 0.8rem; color: #bbb; }
@@ -31,7 +33,7 @@
 
 <section>
     <h2>Profile</h2>
-    <p>Master of Software Engineering candidate specializing in the intersection of clean code and data-driven insights[cite: 5, 16]. With a strong background in Software QA, I focus on building reliable, scalable architecture and AI-powered solutions[cite: 5, 7].</p>
+    <p>Master of Software Engineering candidate specializing in the intersection of clean code and data-driven insights. With a strong background in Software QA, I focus on building reliable, scalable architecture and AI-powered solutions.</p>
 </section>
 
 <section>
@@ -39,7 +41,10 @@
     <div class="project-card">
         <span class="project-title">Industrial Air Discharge AI Dashboard</span>
         <em style="font-size: 0.9rem; color: #666;">Auckland Council</em>
-        <p style="margin-top: 10px;">Developed an AI-powered dashboard designed to manage and analyze Industrial Air Discharge Consents. The solution leverages data analytics to provide actionable insights for environmental compliance[cite: 8].</p>
+        <p style="margin-top: 10px;">Developed an AI-powered dashboard designed to manage and analyze Industrial Air Discharge Consents. The solution leverages data analytics to provide actionable insights for environmental compliance.</p>
+        
+        <a href=https://tavera-pepere.streamlit.app/ target="_blank" class="project-link">View Live Dashboard →</a>
+
         <ul class="tags">
             <li>Python</li>
             <li>Streamlit</li>
