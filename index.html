@@ -9,11 +9,10 @@
             --black: #1a1a1a;
             --blue: #007aff;
             --red: #ff3b30;
-            --gray-light: #f4f4f2; /* Slightly warmer paper-like gray */
+            --gray-light: #f8f9fa;
             --gray-med: #8e8e93;
+            --grid-color: rgba(0, 122, 255, 0.05); /* Very subtle blue grid */
             --shadow: 0 10px 20px rgba(0,0,0,0.08);
-            /* Paper Texture Logic */
-            --paper-texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
         body { 
@@ -21,9 +20,11 @@
             line-height: 1.6; 
             color: var(--black); 
             background-color: var(--gray-light);
-            /* This creates the textured paper effect */
-            background-image: var(--paper-texture);
-            background-blend-mode: overlay;
+            /* Engineering Grid Pattern */
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 20px 20px;
             max-width: 700px; 
             margin: 0 auto; 
             padding: 60px 20px;
@@ -31,25 +32,14 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(2px);
+            background: white;
             padding: 40px;
             border-radius: 16px;
             box-shadow: var(--shadow);
             border-left: 6px solid var(--blue);
             margin-bottom: 50px;
             transition: transform 0.3s ease;
-            position: relative;
-        }
-
-        /* Subtle "paper edge" effect for the header */
-        header::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: var(--paper-texture);
-            opacity: 0.05;
-            pointer-events: none;
+            border: 1px solid #eee;
         }
 
         header:hover { transform: translateY(-5px) rotateX(2deg); }
@@ -83,18 +73,18 @@
         h2::after { content: ""; flex: 1; height: 1px; background: #e0e0e0; margin-left: 20px; }
 
         .project-card { 
-            background: rgba(255, 255, 255, 0.95); 
+            background: white; 
             padding: 35px; 
             border-radius: 16px; 
             box-shadow: var(--shadow);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            position: relative;
-            overflow: hidden;
+            border: 1px solid #eee;
         }
 
         .project-card:hover { 
             transform: translateY(-12px) scale(1.01);
             box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+            border-color: var(--blue);
         }
 
         .project-title { font-weight: 800; font-size: 1.3rem; color: var(--black); display: block; }
@@ -123,15 +113,13 @@
             margin-top: 25px; 
         }
         .tags li { 
-            background: rgba(0,0,0,0.03); 
             padding: 5px 14px; 
             border-radius: 6px; 
             font-size: 0.75rem; 
-            color: #555;
             font-weight: 600;
         }
 
-        .edu-item { margin-bottom: 25px; padding-left: 20px; border-left: 3px solid #ddd; }
+        .edu-item { margin-bottom: 25px; padding-left: 20px; border-left: 3px solid #eee; }
         .edu-item strong { color: var(--black); font-size: 1.1rem; }
         .edu-meta { color: var(--gray-med); font-size: 0.9rem; display: block; }
 
@@ -152,7 +140,7 @@
 
 <section>
     <h2>Profile</h2>
-    <p>Master of Software Engineering candidate specializing in the intersection of clean code and data-driven insights. I focus on building reliable, scalable architecture and AI-powered solutions, backed by a strong foundation in Software QA.</p>
+    <p>Master of Software Engineering candidate specializing in the intersection of clean code and data-driven insights. I focus on building reliable, scalable architecture and AI-powered solutions.</p>
 </section>
 
 <section>
@@ -165,10 +153,10 @@
         <a href="https://tavera-pepere.streamlit.app/" target="_blank" class="project-link">Launch Project →</a>
 
         <ul class="tags">
-            <li>Python</li>
-            <li>Streamlit</li>
-            <li>Machine Learning</li>
-            <li>Data Visualization</li>
+            <li style="background: #f0f0f2; color: #555;">Python</li>
+            <li style="background: #f0f0f2; color: #555;">Streamlit</li>
+            <li style="background: #f0f0f2; color: #555;">Machine Learning</li>
+            <li style="background: #f0f0f2; color: #555;">Data Visualization</li>
         </ul>
     </div>
 </section>
